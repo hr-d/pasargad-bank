@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HRD\Alocom\Collection;
+namespace HRD\Pasargad\Collection;
 
 
-use HRD\Alocom\HttpClients\Request;
-use HRD\Alocom\Models\Room;
+use HRD\Pasargad\HttpClients\Request;
+use HRD\Pasargad\Models\Room;
 
 /**
  * Class Payment

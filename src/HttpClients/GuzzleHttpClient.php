@@ -1,6 +1,6 @@
 <?php
 
-namespace HRD\Alocom\HttpClients;
+namespace HRD\Pasargad\HttpClients;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -25,18 +25,12 @@ class GuzzleHttpClient
     protected $timeOut = 30;
 
     /**
-     * @var ErrorHandling
-     */
-    protected $errorHandling;
-
-    /**
      * GuzzleHttpClient constructor.
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
     {
         $this->client = $client ?: new Client();
-        $this->errorHandling = new ErrorHandling();
     }
 
     /**
@@ -69,7 +63,6 @@ class GuzzleHttpClient
         } catch (ClientException $exception) {
             $response = $exception->getResponse();
             $result = json_decode($response->getBody(), true);
-            $this->errorHandling->fire($response->getStatusCode(), $result);
         } catch (\Exception $e) {
             throw $e;
         }

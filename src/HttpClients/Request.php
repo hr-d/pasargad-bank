@@ -1,6 +1,6 @@
 <?php
 
-namespace HRD\Alocom\HttpClients;
+namespace HRD\Pasargad\HttpClients;
 
 class Request
 {
