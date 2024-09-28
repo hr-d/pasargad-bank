@@ -63,6 +63,7 @@ class GuzzleHttpClient
         } catch (ClientException $exception) {
             $response = $exception->getResponse();
             $result = json_decode($response->getBody(), true);
+            throw new \Exception($result['resultMsg'] ?? $response->getBody() ?? "", $result['resultCode'] ?? $response->getStatusCode());
         } catch (\Exception $e) {
             throw $e;
         }
