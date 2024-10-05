@@ -55,7 +55,7 @@ class Payment
         }
     }
 
-    public function confirm(int $invoice, string $urlId)
+    public function confirm(string $invoice, string $urlId)
     {
         $data = [
             "invoice" => $invoice,
