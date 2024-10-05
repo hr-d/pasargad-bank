@@ -29,7 +29,7 @@ class Payment
      * purchase
      * @return $this
      */
-    public function purchase(int $invoice, string $invoiceDate, int $amount, string $callbackApi, string $mobileNumber = null, string $email = null)
+    public function purchase(string $invoice, string $invoiceDate, int $amount, string $callbackApi, string $mobileNumber = null, string $email = null)
     {
         $data = [
             "invoice" => $invoice,
