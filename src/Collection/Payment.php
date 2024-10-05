@@ -44,7 +44,7 @@ class Payment
 
         ];
         try {
-            $response = $this->request->make('payment/purchase', 'POST', $data);
+            $response = $this->request->make('api/payment/purchase', 'POST', $data);
         } catch (\Throwable $exception) {
             throw $exception;
         }
@@ -63,7 +63,7 @@ class Payment
         ];
 
         try {
-            $response = $this->request->make('payment/confirm-transactions', 'POST', $data);
+            $response = $this->request->make('api/payment/confirm-transactions', 'POST', $data);
         } catch (\Throwable $exception) {
             throw $exception;
         }
